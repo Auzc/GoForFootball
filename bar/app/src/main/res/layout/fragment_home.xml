@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 这里放置子 View -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_gray"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/focus_stealer"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/background_gray"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_gray"
+                    android:text="球场+"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:textSize="22dp"
+                    android:gravity="center"/>
+
+                <ImageButton
+                    android:id="@+id/btn_football"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:scaleType="centerInside"
+                    android:background="@drawable/shape_button_test"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center"
+                    android:src="@drawable/football2" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="300dp"
+                android:padding="10dp"
+                >
+                <com.tencent.tencentmap.mapsdk.maps.TextureMapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+                <ImageButton
+                    android:id="@+id/my_location_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/shape_button_test"
+                    android:gravity="center"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/navigation128" />
+
+            </RelativeLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/background_gray" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                >
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_gray" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/btn_add_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/white"
+                        android:scaleType="centerInside"
+                        android:layout_gravity="center"
+                        android:src="@drawable/football_field"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="发现球场"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_gray" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <ImageButton
+                        android:id="@+id/btn_map"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/white"
+                        android:scaleType="centerInside"
+                        android:layout_gravity="center"
+                        android:src="@drawable/map_48"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:text="球场地图"
+                        />
+                </LinearLayout>
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/background_gray" />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:padding="10dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:orientation="vertical">-->
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/add_team"-->
+<!--                        android:layout_width="40dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:layout_marginTop="20dp"-->
+<!--                        android:background="@color/white"-->
+<!--                        android:scaleType="centerInside"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:src="@drawable/team_48"/>-->
+<!--                    <TextView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:layout_marginTop="5dp"-->
+<!--                        android:layout_marginBottom="10dp"-->
+
+<!--                        android:gravity="center"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:text="创建球队"-->
+<!--                        />-->
+<!--                </LinearLayout>-->
+<!--                <View-->
+<!--                    android:layout_width="5dp"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:background="@color/background_gray" />-->
+                <!--        <Button-->
+                <!--            android:id="@+id/btn_add"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:text="添加"-->
+                <!--            />-->
+                <!--        <EditText-->
+                <!--            android:id="@+id/name_group"-->
+                <!--            android:layout_width="wrap_content"-->
+                <!--            android:layout_height="match_parent"-->
+                <!--            android:hint="请输入要添加的群组(不要输入重复的名字sss)"-->
+                <!--            />-->
+
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/background_gray" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabMode="fixed"
+                app:tabGravity="fill"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:background="@drawable/rounded_box"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/background_gray" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

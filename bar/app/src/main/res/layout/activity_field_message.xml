@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_gray"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            >
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_gravity="left"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:background="@drawable/shape_button_test"
+                android:src="@drawable/ic_arrow_back_white_24dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:text="球场信息"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textSize="22dp"
+                android:gravity="center"/>
+
+            <ImageButton
+                android:id="@+id/btn_football_field"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:scaleType="centerInside"
+                android:background="@drawable/shape_button_test"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:src="@drawable/addchatroom" />
+        </androidx.appcompat.widget.Toolbar>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/background_gray" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:id="@+id/showtp"
+                android:src="@drawable/stadium128"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:id="@+id/Names"
+                android:textStyle="bold"
+                android:textSize="22sp"
+                android:text="志义体育场"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:padding="18dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:background="@color/white"
+
+                android:gravity="left"
+
+                android:src="@drawable/mappp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/background_gray" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@color/white"
+                android:layout_height="300dp"
+                android:padding="10dp"
+                android:orientation="vertical">
+                <com.tencent.tencentmap.mapsdk.maps.TextureMapView
+                    android:id="@+id/mapView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/address0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:gravity="left|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_gravity="center"
+
+                android:textSize="18sp"
+                android:text="地址："
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:padding="18dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:background="@color/white"
+
+                android:gravity="left"
+
+                android:src="@drawable/info" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/background_gray" />
+            <TextView
+                android:id="@+id/isopen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="6dp"
+                android:gravity="left|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_gravity="center"
+
+                android:textSize="18sp"
+                android:text="对外开放"
+                />
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/address"-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:padding="6dp"-->
+            <!--                android:gravity="left|center"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:background="@color/white"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:textSize="12sp"-->
+            <!--                android:text=""-->
+            <!--                />-->
+            <TextView
+                android:id="@+id/size_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:gravity="left|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_gravity="center"
+
+                android:textSize="18sp"
+                android:text="标准足球场"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:gravity="left|center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:layout_gravity="center"
+
+                android:textSize="18sp"
+                android:text="人工草皮"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_marginTop="10dp"
+            android:padding="18dp"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:scaleType="centerInside"
+                android:background="@color/white"
+                android:gravity="left"
+                android:src="@drawable/pic"
+                 />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/background_gray" />
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/rounded_box"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</ScrollView>

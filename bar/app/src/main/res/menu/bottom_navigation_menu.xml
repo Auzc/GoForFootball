@@ -1,0 +1,29 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/football_roll_48"
+        android:title="@string/bar_home"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_messages"
+        android:icon="@drawable/messages_48"
+        android:title="@string/bar_messages"
+
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_community"
+        android:icon="@drawable/community"
+        android:title="@string/bar_community"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/user"
+        android:title="@string/bar_user"
+        app:showAsAction="ifRoom"/>
+
+</menu>

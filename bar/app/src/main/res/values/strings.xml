@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">球场+</string>
+    <string name="unlogin">用户未登录</string>
+    <string name="username_hint">用户名</string>
+    <string name="password_hint">密码</string>
+    <string name="login">登录</string>
+    <string name="register_hint">没有账户吗？注册一个</string>
+    <string name="register">注册</string>
+    <string name="login_hint">已有账户了吗？请登录</string>
+    <string name="bar_user">用户</string>
+    <string name="bar_home">踢球</string>
+    <string name="bar_community">社区</string>
+
+    <string name="bar_messages">聊天室</string>
+    <string name="type_message">请输入</string>
+
+    <string-array name="position_options">
+        <item>中锋</item>
+        <item>边锋</item>
+        <item>前腰</item>
+        <item>后腰</item>
+        <item>前卫</item>
+        <item>边前卫</item>
+        <item>边后卫</item>
+        <item>中后卫</item>
+        <item>门将</item>
+    </string-array>
+
+
+    <string name="title_user_registration">User Registration</string>
+    <string name="hint_name">Name</string>
+    <string name="hint_age">Age</string>
+    <string name="hint_height">Height (cm)</string>
+    <string name="hint_weight">Weight (kg)</string>
+    <string name="hint_position">Position</string>
+    <string name="hint_signature">Signature</string>
+    <string name="error_empty_field">This field cannot be empty.</string>
+    <string name="btn_register">Register</string>
+
+
+</resources>

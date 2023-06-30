@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许联网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 获取GSM（2g）、WCDMA（联通3g）等网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 获取wifi网络状态的信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 保持CPU 运转，屏幕和键盘灯有可能是关闭的,用于文件上传和下载 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 获取sd卡写的权限，用于文件上传和下载 -->
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 腾讯地图 SDK 要求的权限(开始) -->
+    <!-- 访问网络获取地图服务 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 检查网络可用性 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 访问WiFi状态 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 需要外部存储写权限用于保存地图缓存 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup"
+        tools:targetApi="31">
+        <activity
+            android:name=".toolPhoto.SelectPictureActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".user.InitLoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="4BZBZ-VLMCX-5WG46-TAHQ4-ISLX2-46FLD" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".user.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".user.RegisterActivity"
+            android:exported="true" />
+
+
+        <provider
+            android:name="cn.bmob.v3.util.BmobContentProvider"
+            android:authorities="com.example.bar.BmobContentProvider" />
+
+        <activity android:name=".user.EditMessageActivity" />
+        <activity android:name=".user.SettingsActivity" />
+        <activity android:name=".map.MapActivity" />
+        <activity android:name=".map.SelectPlaceActivity" />
+        <activity android:name="com.example.bar.field.AddFieldActivity" />
+        <activity android:name="com.example.bar.field.MessageOfFieldActivity" />
+        <activity android:name="com.example.bar.news.NewsActivity" />
+        <activity android:name="com.example.bar.toolPhoto.SelectUserPictureActivity" />
+        <activity android:name="com.example.bar.post.AddPostActivity" />
+        <activity android:name="com.example.bar.chat.ChatActivity" />
+        <activity android:name="com.example.bar.user.AdviceActivity" />
+        <activity android:name="com.example.bar.user.AboutActivity" />
+        <activity android:name="com.example.bar.user.AccountActivity" />
+        <activity android:name="com.example.bar.user.ChangePasswordActivity" />
+        <activity android:name="com.example.bar.chat.FindActivity" />
+        <activity android:name="com.example.bar.chat.MyChatRoomActivity" />
+    </application>
+
+</manifest>
